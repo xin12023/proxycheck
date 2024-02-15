@@ -20,4 +20,6 @@ chmod +x "$TARGET_SCRIPT"
 CRON_JOB="*/5 * * * * $TARGET_SCRIPT"
 (crontab -l | grep -v -F "$TARGET_SCRIPT"; echo "$CRON_JOB") | crontab -
 
+crontab -l
+
 echo "安装完成，定时任务已设置。"
